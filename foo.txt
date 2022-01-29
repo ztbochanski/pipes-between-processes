@@ -1,0 +1,12 @@
+total 248
+drwxr-xr-x@ 11 zach  staff    352 28 Jan 23:34 .
+drwx------@  8 zach  staff    256 28 Jan 13:39 ..
+drwxr-xr-x  14 zach  staff    448 28 Jan 23:22 .git
+-rw-r--r--   1 zach  staff      9 28 Jan 14:07 .gitignore
+-rw-r--r--   1 zach  staff    185 27 Jan 22:32 Makefile
+-rw-r--r--   1 zach  staff     26 26 Jan 18:09 README.md
+-rw-r--r--   1 zach  staff      0 28 Jan 23:34 foo.txt
+-rwxr-xr-x   1 zach  staff  49872 28 Jan 19:53 lswc
+-rw-r--r--   1 zach  staff   1446 28 Jan 19:53 lswc.c
+-rwxr-xr-x   1 zach  staff  50000 28 Jan 23:34 redirout
+-rw-r--r--   1 zach  staff   1488 28 Jan 23:34 redirout.c
