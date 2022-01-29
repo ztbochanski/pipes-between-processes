@@ -52,6 +52,14 @@ int main(int argc, char **argv)
     write(output_file, &buffer, number_of_bytes_read);
   }
 
-  close(pipe_file_descriptors[0]);
-  close(output_file);
+  if (close(pipe_file_descriptors[0]) == -1)
+  {
+    perror("failed to close file descriptor input");
+    exit(1);
+  }
+  else if (close(output_file) == -1)
+  {
+    perror("failed to close file");
+    exit(1);
+  }
 }
