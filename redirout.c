@@ -5,10 +5,6 @@
 
 int pipe_file_descriptors[2];
 
-// dup2(pipe_file_descriptors[1], 1); // write end of pipe to std out
-// close(pipe_file_descriptors[0]);
-// execvp(command, options);
-
 int main(int argc, char **argv)
 {
   pid_t process_id;
@@ -22,8 +18,7 @@ int main(int argc, char **argv)
   // 1. command line arguments
   char *new_file = argv[1];
   char *command = argv[2];
-  char *option1 = argv[3];
-  char *option2 = argv[4];
+  char *options[4] = {argv[2], argv[3], argv[4], NULL};
 
   // 2. open the output file
   int output_file = open(new_file, O_WRONLY | O_TRUNC | O_CREAT, 0644);
@@ -43,8 +38,7 @@ int main(int argc, char **argv)
   }
   else if (process_id == 0)
   {
-    char *options[3] = {option1, option2, NULL};
-    dup2(pipe_file_descriptors[1], 1); // write end of pipe to std out
+    dup2(pipe_file_descriptors[1], 1); // write/output end of pipe to std out
     close(pipe_file_descriptors[0]);
     execvp(command, options);
   }
