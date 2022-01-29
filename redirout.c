@@ -1,3 +1,7 @@
+// Zachary Bochanski
+// pipe output from command line available process to write to a user specified file
+// This file is litered with comments for personal learning/note taking
+
 #include <stdio.h>  // for printf(), perror()
 #include <stdlib.h> // for exit()
 #include <unistd.h> // for fork(), execlp(), close()
